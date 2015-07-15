@@ -14,5 +14,9 @@ if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 
 for lines in handle:
-	words = lines.split()
-	
+	# ignore blank lines
+	if lines.strip():
+		words = lines.split()
+		# get lines starting with 'From '
+		if words[0] == 'From':
+			print words[1]
