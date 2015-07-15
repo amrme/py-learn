@@ -29,4 +29,22 @@ for lines in handle:
 			# if sender isn't in sender_count add him and his count
 			sender_count[sender] = sender_count.get(sender, 0) + 1
 
-print sender_count
+# Now we have the total dictionalry of the sender count pairs
+# print sender_count
+
+max_mail = None
+max_count = None
+# Loop through the dict and find the max count then print the pair
+for mail, ct in sender_count.items():
+	if max_count == None or ct > max_count:
+		max_mail = mail
+		max_count = ct
+
+
+# Print the max sender
+print max_mail, max_count
+
+
+
+
+
