@@ -13,6 +13,9 @@ name = raw_input("Enter file:")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 
+# create empty dict
+sender_count = dict()
+
 for lines in handle:
 	# ignore blank lines
 	if lines.strip():
@@ -21,9 +24,6 @@ for lines in handle:
 		if words[0] == 'From':
 			# get all senders words[1]
 			# print words[1]
-
-			# create empty dict
-			sender_count = dict()
 			sender = words[1]
 
 			# if sender isn't in sender_count add him and his count
