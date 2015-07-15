@@ -19,4 +19,14 @@ for lines in handle:
 		words = lines.split()
 		# get lines starting with 'From '
 		if words[0] == 'From':
-			print words[1]
+			# get all senders words[1]
+			# print words[1]
+
+			# create empty dict
+			sender_count = dict()
+			sender = words[1]
+
+			# if sender isn't in sender_count add him and his count
+			sender_count[sender] = sender_count.get(sender, 0) + 1
+
+print sender_count
