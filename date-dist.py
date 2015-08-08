@@ -25,7 +25,10 @@ for line in handle:
 			# get the count 
 			count[hour] = 1 + count.get(hour, 0)
 
+sorted_count = count.items()
+sorted_count.sort()
+print sorted_count
 
 # loop and print all the hour, count pairs
-for hours, counts in count.items():
-	print hours, counts
+# for hours, counts in count.items().sort():
+# 	print hours, counts
