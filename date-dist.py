@@ -30,5 +30,5 @@ sorted_count.sort()
 print sorted_count
 
 # loop and print all the hour, count pairs
-# for hours, counts in count.items().sort():
-# 	print hours, counts
+for hours, counts in sorted_count:
+	print hours, counts
