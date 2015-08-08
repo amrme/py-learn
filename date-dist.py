@@ -13,8 +13,6 @@ handle = open(name)
 for line in handle:
 	# find relevant line: starting with 'From '
 	words = line.split()
-	if words[0]:
-		if words[0] is not 'From':
-			continue
-		else:
+	if words:
+		if words[0] == 'From':
 			print words[0]
