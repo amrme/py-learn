@@ -27,7 +27,7 @@ for line in handle:
 
 sorted_count = count.items()
 sorted_count.sort()
-print sorted_count
+# print sorted_count
 
 # loop and print all the hour, count pairs
 for hours, counts in sorted_count:
