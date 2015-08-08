@@ -16,5 +16,6 @@ for line in handle:
 	if words:
 		if words[0] == 'From':
 			# print words[0]
-			time = words[5]
-			print time
+			time = words[5].partition(':')
+			hour = time[0]
+			print hour
