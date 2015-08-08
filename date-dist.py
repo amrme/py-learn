@@ -15,4 +15,6 @@ for line in handle:
 	words = line.split()
 	if words:
 		if words[0] == 'From':
-			print words[0]
+			# print words[0]
+			time = words[5]
+			print time
