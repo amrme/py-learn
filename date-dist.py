@@ -26,4 +26,6 @@ for line in handle:
 			count[hour] = 1 + count.get(hour, 0)
 
 
-# loop and print all the 
+# loop and print all the hour, count pairs
+for hours, counts in count.items():
+	print hours, counts
